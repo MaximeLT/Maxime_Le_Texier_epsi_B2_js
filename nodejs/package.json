@@ -18,6 +18,20 @@
   "homepage": "https://github.com/MaximeLT/Maxime_Le_Texier_epsi_B2_js#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "socket.io": "^2.1.1"
+  }
+}
+
+{
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "my first socket.io app",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
