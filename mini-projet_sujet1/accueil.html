@@ -2,6 +2,29 @@
 <html>
 <head>
 	<title>Accueil</title>
+	<script type="text/javascript">
+		var xht = new XMLHttpRequest();
+		var parsedResults = null;
+
+		xht.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				parsedResults = JSON.parse(this.responseText);
+				var campusNote = []
+
+				for (var i = 0; i < parsedResults.table.length; i++) {
+					campusNote[i] = " " +parsedResults.table[i].campusActuel;
+				}
+
+				var p = document.createElement('p');
+				var text = document.createTextNode("Les écoles qui ont déjà noté : "+ campusNote);
+				document.body.appendChild(p);
+				p.appendChild(text);
+			}
+		}
+
+		xht.open("GET", "/notation?type=dataJSON", true);
+		xht.send();
+	</script>
 </head>
 <body id="body1">
 	<div id="div1" style="margin-bottom: 30px">
@@ -44,7 +67,7 @@
 
 				var newDiv = document.createElement("DIV");
 				newDiv.setAttribute("id", "div2");
-				newDiv.setAttribute("style", "border: 2px; border-style: solid; margin-right: 80%; padding: 10px; margin-bottom: 10px;");
+				newDiv.setAttribute("style", "border: 2px; border-style: solid; width: 180px; padding: 10px; margin-bottom: 10px;");
 				document.getElementById("body1").appendChild(newDiv);
 
 				for (var i = 0; i < campus.liste.length; i++) {
@@ -71,7 +94,7 @@
 		function toStringData(campus) {
 			var correctinput = true;
 			for (var i = 0; i < campus.liste.length; i++) {
-				if (document.getElementsByName("input")[i].value > 20 || document.getElementsByName("input")[i].value < 0) {
+				if (document.getElementsByName("input")[i].value > 20 || document.getElementsByName("input")[i].value < 0 || Number.isInteger(document.getElementsByName("input")[i].value) == false) {
 					correctinput = false;
 				}
 			}
@@ -84,8 +107,9 @@
 
 				var xhttp = new XMLHttpRequest();
 
-				xhttp.open("POST", "http://localhost:3000/");
+				xhttp.open("POST", "http://"+window.location.hostname+":3000/");
 				xhttp.setRequestHeader("Content-Type", "application/json");
+				xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
 				xhttp.send(campusString);
 			} else {
 				alert("Veuillez entrer des valeurs valides!")
@@ -94,7 +118,7 @@
 
 		function redirect() {
 			alert("Vous allez être redirigé sur la page des résultats");
-			window.location.replace("http://localhost:3000/notation?type=resultats");
+			window.location.replace("/notation?type=resultats");
 		}
 	</script>
 </html>

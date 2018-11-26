@@ -4,39 +4,39 @@
       "liste": [
         [
           "Brest",
-          "19"
+          "1"
         ],
         [
           "Lille",
-          "9"
+          "3"
         ],
         [
           "Paris",
-          "12"
-        ],
-        [
-          "Bordeaux",
           "5"
         ],
         [
-          "Arras",
+          "Bordeaux",
           "6"
         ],
         [
+          "Arras",
+          "2"
+        ],
+        [
           "Lyon",
-          "17"
+          "13"
         ],
         [
           "Grenoble",
-          "15"
+          "9"
         ],
         [
           "Montpellier",
-          "11"
+          "12"
         ],
         [
           "Nantes",
-          "8"
+          "3"
         ]
       ],
       "campusActuel": "Brest"
@@ -45,23 +45,23 @@
       "liste": [
         [
           "Brest",
-          "7"
+          "9"
         ],
         [
           "Lille",
-          "18"
-        ],
-        [
-          "Paris",
-          "5"
-        ],
-        [
-          "Bordeaux",
           "6"
         ],
         [
-          "Arras",
+          "Paris",
+          "4"
+        ],
+        [
+          "Bordeaux",
           "12"
+        ],
+        [
+          "Arras",
+          "5"
         ],
         [
           "Lyon",
@@ -69,18 +69,18 @@
         ],
         [
           "Grenoble",
-          "11"
-        ],
-        [
-          "Montpellier",
           "5"
         ],
         [
+          "Montpellier",
+          "6"
+        ],
+        [
           "Nantes",
-          "2"
+          "15"
         ]
       ],
-      "campusActuel": "Bordeaux"
+      "campusActuel": "Arras"
     }
   ]
 }
