@@ -81,6 +81,88 @@
         ]
       ],
       "campusActuel": "Arras"
+    },
+    {
+      "liste": [
+        [
+          "Brest",
+          20
+        ],
+        [
+          "Lille",
+          12
+        ],
+        [
+          "Paris",
+          14
+        ],
+        [
+          "Bordeaux",
+          13
+        ],
+        [
+          "Arras",
+          12
+        ],
+        [
+          "Lyon",
+          11
+        ],
+        [
+          "Grenoble",
+          10
+        ],
+        [
+          "Montpellier",
+          9
+        ],
+        [
+          "Nantes",
+          8
+        ]
+      ],
+      "campusActuel": "Grenoble"
+    },
+    {
+      "liste": [
+        [
+          "Brest",
+          20
+        ],
+        [
+          "Lille",
+          10
+        ],
+        [
+          "Paris",
+          11
+        ],
+        [
+          "Bordeaux",
+          13
+        ],
+        [
+          "Arras",
+          15
+        ],
+        [
+          "Lyon",
+          17
+        ],
+        [
+          "Grenoble",
+          19
+        ],
+        [
+          "Montpellier",
+          2
+        ],
+        [
+          "Nantes",
+          2
+        ]
+      ],
+      "campusActuel": "Lyon"
     }
   ]
 }

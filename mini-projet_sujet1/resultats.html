@@ -97,25 +97,36 @@ th, td {
 				var thtext1 = document.createTextNode("Campus");
 				var th2 = document.createElement('th');
 				var thtext2 = document.createTextNode("Points");
+				var th3 = document.createElement('th');
+				var thtext3 = document.createTextNode("Top");
 
 				tableau.appendChild(th1);
 				tableau.appendChild(th2);
+				tableau.appendChild(th3);
 				th1.appendChild(thtext1);
 				th2.appendChild(thtext2);
+				th3.appendChild(thtext3);
 
+				var j = 1;
 				for (var i = classement.length-1; i >= 0; i--){
 				    var tr = document.createElement('tr');
 
 				    var td1 = document.createElement('td');
 				    var td2 = document.createElement('td');
+						var td3 = document.createElement('td');
 
 				    var text1 = document.createTextNode(classement[i][0]);
 				    var text2 = document.createTextNode(classement[i][1]);
+						var text3 = document.createTextNode(j);
+
+						j++;
 
 				    td1.appendChild(text1);
 				    td2.appendChild(text2);
+						td3.appendChild(text3);
 				    tr.appendChild(td1);
 				    tr.appendChild(td2);
+						tr.appendChild(td3);
 
 				    tableau.appendChild(tr);
 				}

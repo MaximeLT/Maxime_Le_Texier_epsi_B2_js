@@ -119,13 +119,13 @@
 		function toStringData(campus) {
 			var correctinput = true;
 			for (var i = 0; i < campus.liste.length; i++) {
-				if (document.getElementsByName("input")[i].value > 20 || document.getElementsByName("input")[i].value < 0 || Number.isInteger(document.getElementsByName("input")[i].value) == false) {
+				if (parseInt(document.getElementsByName("input")[i].value) > 20 || parseInt(document.getElementsByName("input")[i].value) < 0 || Number.isInteger(parseInt(document.getElementsByName("input")[i].value)) == false) {
 					correctinput = false;
 				}
 			}
 			if (correctinput == true) {
 				for (var i = 0; i < campus.liste.length; i++) {
-					campus.liste[i][1] = document.getElementsByName("input")[i].value;
+					campus.liste[i][1] = parseInt(document.getElementsByName("input")[i].value);
 				}
 				var campusString = JSON.stringify(campus);
 				console.log(campusString);
