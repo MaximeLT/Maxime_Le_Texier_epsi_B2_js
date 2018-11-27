@@ -25,6 +25,31 @@
 		xht.open("GET", "/notation?type=dataJSON", true);
 		xht.send();
 	</script>
+	<style type="text/css">
+		*{
+			font-family: sans-serif;
+		}
+		select{
+			border: none;
+			padding: 8px;
+			border-radius: 2px;
+		}
+		button{
+			border: none;
+			padding: 8px;
+			border-radius: 2px;
+			background: #B0C3DF;
+		}
+		button:hover{
+			background: #8AA0C1;
+		}
+		h2,h3,h4{
+			font-weight: 300;
+		}
+		#body1{
+			background: #F5F5F5;
+		}
+	</style>
 </head>
 <body id="body1">
 	<div id="div1" style="margin-bottom: 30px">
@@ -67,7 +92,7 @@
 
 				var newDiv = document.createElement("DIV");
 				newDiv.setAttribute("id", "div2");
-				newDiv.setAttribute("style", "border: 2px; border-style: solid; width: 180px; padding: 10px; margin-bottom: 10px;");
+				newDiv.setAttribute("style", "border: 2px solid #292929; border-radius:10px; width: 180px; padding: 10px; margin-bottom: 10px;");
 				document.getElementById("body1").appendChild(newDiv);
 
 				for (var i = 0; i < campus.liste.length; i++) {

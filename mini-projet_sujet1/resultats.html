@@ -3,10 +3,30 @@
 <head>
 	<title>Resultats</title>
 	<style>
-	table, th, td {
-	    border: 1px solid black;
-	}
-	</style>
+*{
+    font-family: sans-serif;
+}
+button{
+    border: none;
+    padding: 8px;
+    border-radius: 2px;
+    background: #B0C3DF;
+}
+button:hover{
+    background: #8AA0C1;
+}
+h2,h3,h4{
+    font-weight: 300;
+}
+th, td {
+    border: 1px solid #292929;
+		border-radius: 3px;
+		padding: 6px;
+}
+#chart{
+    background: #F5F5F5;
+}
+  </style>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script type="text/javascript">
 		var xhttp = new XMLHttpRequest();
@@ -84,7 +104,7 @@
 				th2.appendChild(thtext2);
 
 				for (var i = classement.length-1; i >= 0; i--){
-				    var tr = document.createElement('tr');   
+				    var tr = document.createElement('tr');
 
 				    var td1 = document.createElement('td');
 				    var td2 = document.createElement('td');
