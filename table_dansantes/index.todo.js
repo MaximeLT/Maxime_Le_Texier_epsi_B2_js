@@ -71,46 +71,48 @@ function getData() {
 
 
 function drawTable() {
-  getData();
-  drawBackground();
+	getData();
+	drawBackground();
+	canvas = document.getElementById("canvas");
+	var PI = Math.PI;
+	var step = 2 * PI / modulo;
+	for (var i = 0; i < modulo; i++)
+	{
+		var x = w/2 + radius * Math.cos((i * step)-PI/2);
+		var y = h/2 + radius * Math.sin((i * step)-PI/2);
+		drawPoint(x,y,'rgb(255,255,0)');
+	}
 
-  for (var i = 0; i <= modulo; i++) {
-    let step = 2 * Math.PI / modulo;
-    let table2 = 2 * Math.PI / table;
-
-    var centreX = w/2;
-    var centreY = h/2;
-
-    x = centreX + radius * Math.cos(i * step);
-    y = centreY + radius * Math.sin(i * step);
-    var x1 = centreX + radius * Math.cos(i * table2);
-    var y1 = centreY + radius * Math.sin(i * table2);
-
-    drawPoint(x, y, "rgb(255,255,0)");
-    drawLine(x,y,x1,y1);
-  }
-
+	for (var i = 0; i < modulo; i++)
+	{
+		var x1 = w/2 + radius * Math.cos((i * step)-PI/2);
+		var y1 = h/2 + radius * Math.sin((i * step)-PI/2);
+		var x2 = w/2 + radius * Math.cos(((i*table%modulo) * step)-PI/2);
+		var y2 = h/2 + radius * Math.sin(((i*table%modulo) * step)-PI/2);
+		drawLine(x1,y1,x2,y2);
+	}
 }
 
 function drawTableIncrement() {
-  drawBackground();
+	drawBackground();
+	canvas = document.getElementById("canvas");
+	var PI = Math.PI;
+	var step = 2 * PI / modulo;
+	for (var i = 0; i < modulo; i++)
+	{
+		var x = w/2 + radius * Math.cos((i * step)-PI/2);
+		var y = h/2 + radius * Math.sin((i * step)-PI/2);
+		drawPoint(x,y,'rgb(255,255,0)');
+	}
 
-  for (var i = 0; i <= modulo; i++) {
-    let step = 2 * Math.PI / modulo;
-    let table2 = 2 * Math.PI / table;
-
-    var centreX = w/2;
-    var centreY = h/2;
-
-    x = centreX + radius * Math.cos(i * step);
-    y = centreY + radius * Math.sin(i * step);
-    var x1 = centreX + radius * Math.cos(i * table2);
-    var y1 = centreY + radius * Math.sin(i * table2);
-
-    drawPoint(x, y, "rgb(255,255,0)");
-    drawLine(x,y,x1,y1);
-  }
-
+	for (var i = 0; i < modulo; i++)
+	{
+		var x1 = w/2 + radius * Math.cos((i * step)-PI/2);
+		var y1 = h/2 + radius * Math.sin((i * step)-PI/2);
+		var x2 = w/2 + radius * Math.cos(((i*table%modulo) * step)-PI/2);
+		var y2 = h/2 + radius * Math.sin(((i*table%modulo) * step)-PI/2);
+		drawLine(x1,y1,x2,y2);
+	}
 }
 
 var resetLoop = false;
@@ -120,7 +122,7 @@ function autoIncrementModulo() {
     getData();
   }
   var j = 0;
-  setTimeout(function () { 
+  setTimeout(function () {
     drawTableIncrement();
     modulo++;
     showStat();
@@ -136,7 +138,7 @@ function autoIncrementTable() {
     getData();
   }
   var j = 0;
-  setTimeout(function () { 
+  setTimeout(function () {
     drawTableIncrement();
     table++;
     showStat();
@@ -152,7 +154,7 @@ function autoIncrementBoth() {
     getData();
   }
   var j = 0;
-  setTimeout(function () { 
+  setTimeout(function () {
     drawTableIncrement();
     modulo += 5;
     table++;
@@ -171,5 +173,3 @@ function stopFunction() {
 function showStat() {
   document.getElementById("stats").innerHTML = "Table : " + table + " Points : " + modulo;
 }
-
-

@@ -1,2 +1,4 @@
 demo1 : https://webaudioapi.com/samples/
 demo2 : https://codepen.io/Rumyra/pen/qyMzqN/
+
+présentation: https://docs.google.com/presentation/d/1wyfCNHwTkQrQ2zaoUWeOivzjAWXcG-9JxCFnpO8HjdA/edit#slide=id.p

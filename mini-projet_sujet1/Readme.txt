@@ -6,10 +6,12 @@ UTILISATION:
 3- Constater les résultats.
 
 IMPORTANT A SAVOIR:
-1- Pour démarrer le serveur, ouvrez l'invite de commande nodejs, sélectionnez le répertoir à la base de "server.js" et éxécuter la commande "node server.js"
-2- Pour réinitialiser les scores, supprimez le fichier data.json.
-3- data.json et disponible sur l'adresse http://localhost:3000/notation?type=dataJSON
-4- Les modules express.js et fs.js sont nécessaires pour fonctionner.
+1- Avant de démarrer le server, vérifier que les modules nodes sont installé, si ce n'est pas le cas, faire 'npm install express' et 'npm install fs' dans l'invite
+de commande nodejs.
+2- Pour démarrer le serveur, ouvrez l'invite de commande nodejs, sélectionnez le répertoir à la base de "server.js" et éxécuter la commande "node server.js"
+3- Pour réinitialiser les scores, supprimez le fichier data.json.
+4- data.json et disponible sur l'adresse http://localhost:3000/notation?type=dataJSON
+5- Les modules express.js et fs.js sont nécessaires pour fonctionner.
 
 FONCTIONNEMENT:
 1- Le server envoie les pages d'accueil, de résultats, et JSON sur différentes routes en méthode GET
